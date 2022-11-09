@@ -5,7 +5,7 @@
 #define INTERVALS 10000000
 
 double a[INTERVALS], b[INTERVALS];
-
+  
 int main(int argc, char **argv)
 {
   double time2;
@@ -50,5 +50,4 @@ int main(int argc, char **argv)
    printf("Interval %ld: %f\n", i, to[i]);
   
   return 0;
-}                
-
+}
