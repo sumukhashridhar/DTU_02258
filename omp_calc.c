@@ -10,9 +10,11 @@ int main(int argc, char **argv)
 {
   double time2;
   time_t time1 = clock();
+
   double *to = b;
   double *from = a;
   int    time_steps = 100;
+  omp_set_num_threads(6);
 
   /* Set up initial and boundary conditions. */
   from[0] = 1.0;

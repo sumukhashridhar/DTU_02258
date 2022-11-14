@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 
-#define INTERVALS 100
+#define INTERVALS 12
 
 double a[INTERVALS], b[INTERVALS];
 
@@ -27,24 +27,21 @@ int main(int argc, char **argv)
   /* Apply stencil iteratively. */
   while(time_steps-- > 0)
   {
-    printf("\n");
    for(long i = 1; i < (INTERVALS - 1); i++)
     to[i] = from[i] + 0.1*(from[i - 1] - 2*from[i] + from[i + 1]);
-    
+
    {
     double* tmp = from;
     from = to;
     to = tmp;
    }
   }
-                int length = *(&to + 1) - to;
-    printf("Length: %d\n", length);
 
   time2 = (clock() - time1) / (double) CLOCKS_PER_SEC;
 
   printf("Elapsed time (s) = %f\n", time2);
 
-  for(long i = 2; i < 30; i += 2)
+  for(long i = 2; i < 12; i += 2)
    printf("Interval %ld: %f\n", i, to[i]);
   
   return 0;
