@@ -2,3 +2,5 @@ a.out
 calc
 omp_calc
 *.txt
+mpiCalc
+*.sh
