@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 
-#define INTERVALS 12
+#define INTERVALS 100000
 
 double a[INTERVALS], b[INTERVALS];
 
